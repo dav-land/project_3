@@ -1,6 +1,6 @@
 close all; clear all; 
 % Set the axis limits
-x1min = 0; x1max = 25; x2min = 0; x2max = 55;
+x1min = 0; x1max = 26.76; x2min = 0; x2max = 60;
 %set step size for x1 and x2;
 x1step = 1; x2step = 1; 
 %generate mesh for plotting
@@ -27,18 +27,23 @@ dx2 = dx2./sqrt(dx1.^2 + dx2.^2);
 
 %setting the domain and range of the nullclines
 x1nullmin = -10; x1nullmax = 20; 
-x2nullmin = -10; x2nullmax =  65;
+x2nullmin = 0; x2nullmax =  65;
 
 %these are the equations of the nullclines
 vnull = a/b; 
 vnull0 = 0;
 hnull = c/d;
 hnull0 = 0;
+y = x2nullmin:1:x2nullmax;
 
-%plot
+%plotting the nullclines
 hold on
+plot(0, 0, '-o')
+plot(c/d, a/b, '-o')
 fplot(vnull)
 fplot(hnull0)
+plot(hnull*ones(1,size(y,2)), y, 'LineWidth', 1)
+plot(hnull0*ones(1,size(y,2)), y, 'LineWidth', 1)
 
 % Generate the vector field
 
