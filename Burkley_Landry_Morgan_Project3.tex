@@ -60,7 +60,7 @@
 \setcounter{page}{2}
 
 \section{Introduction} \label{APPM2360proj01sec01}
-\quad Understanding the growth of a population is a complex challenge as population dynamics depend on a large number of factors such as fertility, size, and available resources. Understanding the growth of a population becomes more complicated when observing the biological system of two interacting species.There are many ways to model the relationship between the populations of a species of predator and prey. The populations of predators and prey are interdependent, however the size of one population causes spikes or dips in the other. Beyond just the size of the species' populations, there are many external factors that can influence the growth of these species. Including these into the model results in more accurate, yet more complex, models. More intricate models take into account factors found in populations such as carrying capacity and migration in order to better predict the future growth or decline of populations. The Lotka-Volterra model incorporates observational data of a species' growth and the rate of interactions between species in order to understand the dynamics of population of predators and prey. 
+\quad Understanding the growth of a population is a complex challenge as population dynamics depend on a large number of factors such as fertility, size, and available resources. Understanding the growth of a population becomes more complicated when observing the biological system of two interacting species. There are many ways to model the relationship between the populations of a species of predator and prey. The populations of predators and prey are interdependent, however the size of one population causes spikes or dips in the other. Beyond just the size of the species' populations, there are many external factors that can influence the growth of these species. Including these into the model results in more accurate, yet more complex, models. More intricate models take into account factors found in populations such as carrying capacity and migration in order to better predict the future growth or decline of populations. The Lotka-Volterra model incorporates observational data of a species' growth and the rate of interactions between species in order to understand the dynamics of population of predators and prey. 
 
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 \setcounter{page}{1}
@@ -137,7 +137,7 @@ The two-dimensional system of autonomous, first order differential equations can
   \end{bmatrix}
 \end{align*}
 
-The Jacobian matrix for this system is give by the partial derivative of (3).
+The Jacobian matrix for this system is given by the partial derivatives of (\ref{eq:1}) and (\ref{eq:2}).
 \begin{align*} 
   J 
   =
@@ -152,7 +152,7 @@ The Jacobian matrix for this system is give by the partial derivative of (3).
   \end{bmatrix}
 \end{align*}
 
-\quad Now, the stability of the equilibrium solutions for this system of differential equations can be determined by using the eigenvalues of the Jacobian matrix. If the Jocobian matrix's eigenvalues have a negative real part when evaluated at the equilibrium point, then the equilibrium is asymptotically stable. If the at least one of the eigenvalues has a positive real part, the equilibrium is unstable. And finally, if an eigenvalue of the Jacobian has a eigenvalue with a real part equal to zero, then the equilibrium point is neutrally stable. The Equilibrium points are at the points of intersection of a vertical nullcline and the horizontal nullcline. The vertical and horizontal nullclines intersect at $(0,0)$ and $(\frac{c}{d},\frac{a}{b})$.  
+\quad Now,the stability of the equilibrium solutions for this system of differential equations can be determined by using the eigenvalues of the Jacobian matrix. If the Jocobian matrix's eigenvalues have a negative real part when evaluated at the equilibrium point, then the equilibrium is asymptotically stable. If the at least one of the eigenvalues has a positive real part, the equilibrium is unstable. And finally, if an eigenvalue of the Jacobian has a eigenvalue with a real part equal to zero, then the equilibrium point is neutrally stable. The Equilibrium points are at the points of intersection of a vertical nullcline and the horizontal nullcline. The vertical and horizontal nullclines intersect at $(0,0)$ and $(\frac{c}{d},\frac{a}{b})$.  
 
 For $J$ evaluated at the equilibrium point $(0,0)$ the eigenvalues are $\lambda=-a,\ c$, which is unstable.
 \begin{align*}
@@ -178,7 +178,7 @@ For $J$ evaluated at the equilibrium point $(\frac{c}{d},\frac{a}{b})$ the eigen
 
 \begin{figure} [h] 
   \centering
-  \includegraphics[width=15cm]{dirfield.png}
+  \includegraphics[width=15cm]{images/dirfield.png}
   \caption{Direction Field Plot}
   \label{fig:dirfield}
 \end{figure}
@@ -193,7 +193,7 @@ For $J$ evaluated at the equilibrium point $(\frac{c}{d},\frac{a}{b})$ the eigen
   \label{eq:5}
 \end{equation}
 
-\quad The physical meaning of parameter k in (\ref{eq:5}) is the value of carrying capacity over one, therefore the units of k are $prey^{-1}$.  The equilibrium solutions can be found when both (\ref{eq:4}) and (\ref{eq:5}) are equal to zero.  Solving for this gives,
+\quad The physical meaning of parameter $k$ in (\ref{eq:5}) is the value of carrying capacity over one, therefore the units of $k$ are $prey^{-1}$.  The equilibrium solutions can be found when both (\ref{eq:4}) and (\ref{eq:5}) are equal to zero.  Solving for this gives,
 
 \begin{align*}
   \frac{dx_1}{dt} =0= -ax_1 + bx_1x_2\\
@@ -212,17 +212,19 @@ For $J$ evaluated at the equilibrium point $(\frac{c}{d},\frac{a}{b})$ the eigen
 
 \begin{figure} [h] 
   \centering
-  \includegraphics[width=10cm]{circ001.png}
+  \includegraphics[width=10cm]{images/circ001.png}
   \caption{Plot of Population Oscillations with $k=0.001$}
   \label{fig:circ001}
 \end{figure}
 
 \begin{figure} [h] 
   \centering
-  \includegraphics[width=10cm]{circ02.png}
+    \includegraphics[width=10cm]{images/circ02.png}
   \caption{Plot of Population Oscillations with $k=0.02$}
   \label{fig:circ02}
 \end{figure}
+
+\quad The structure of these two solutions are very different, as they model different ecosystems capable of supporting different sized populations. In \autoref{fig:cir001}, the
 
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 \newpage
