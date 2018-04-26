@@ -170,7 +170,7 @@ For $J$ evaluated at the equilibrium point $(\frac{c}{d},\frac{a}{b})$ the eigen
 
 \quad The physical interpretation of $(0,0)$ being unstable make sense in the context of this model because if any prey existed in this system, then the prey population would begin to grow and move away from the equilibrium point. Even though if one predator existed and died out, returning the system to the equilibrium point the equilibrium, is still unstable. 
 
-\quad The point $(\frac{c}{d},\frac{a}{b})$ is neutrally stable which means that once there, the two populations will oscillate around that point. As the predator species grows, there will by more interactions with the prey species. This will have the effect of decreasing the size of the prey population as more predators hunt for food. A smaller prey population will in turn decrease the predator population by causing a food shortage. This decrease in the predator population ultimately allows the prey population to rebound and increase again. This balanced cycle repeats as time moves forward, as seen in Figure \ref{fig:dirfield}. 
+\quad The point $(\frac{c}{d},\frac{a}{b})$ is neutrally stable which means that once there, the two populations will oscillate around that point. As the predator species grows, there will by more interactions with the prey species. This will have the effect of decreasing the size of the prey population as more predators hunt for food. A smaller prey population will in turn decrease the predator population by causing a food shortage. This decrease in the predator population ultimately allows the prey population to rebound and increase again. This balanced cycle repeats as time moves forward, as seen in \autoref{fig:dirfield}. 
 
 \begin{figure} [h] 
   \centering
@@ -200,7 +200,25 @@ For $J$ evaluated at the equilibrium point $(\frac{c}{d},\frac{a}{b})$ the eigen
   x_2=0,\ x_2=\frac{c-dx_1}{ck}
 \end{align*}
 
-Therefore there are equilibrium points at $(0,0)$, $(0,\frac{c}{d})$, and if $k<\frac{b}{a}$ then there is also an equilibrium solution at $(\frac{a}{b},\frac{c(b-k)}{bd})$. $k$ must be less than $\frac{b}{a}$ because if it is not then that intersection of nullclines happens at a negative value of $x_1$ and is therefore unphysical in this problem.
+\quad Therefore there are equilibrium points at $(0,0)$, $(0,\frac{c}{d})$, and if $k<\frac{b}{a}$ then there is also an equilibrium solution at $(\frac{a}{b},\frac{c(b-k)}{bd})$. $k$ must be less than $\frac{b}{a}$ because if it is not then that intersection of nullclines happens at a negative value of $x_1$ and is therefore unphysical in this problem.
+
+\quad When (\ref{eq:4}) and (\ref{eq:5}) are solved numerically with ode45 where $k=0.001$ the resulting plot of $x_1 vs x_2$ is shown in \autoref{fig:circ001}.  These solutions show both periodic and asymptotic behavior. The plot cycles between periods of a low predator population with a high prey population and periods of a high predator population with a low prey population. 
+
+\quad When (\ref{eq:4}) and (\ref{eq:5}) are solved numerically with ode45 where $k=0.02$ the resulting plot of $x_1 vs x_2$ is shown in \autoref{fig:circ02}.  These solutions show periodic behavior. The plot cycles between periods of a low predator population with a high prey population and periods of a high predator population with a low prey population. 
+
+\begin{figure} [h] 
+  \centering
+  \includegraphics[width=15cm]{circ001.png}
+  \caption{Plot of Population Oscillations with $k=0.001$}
+  \label{fig:circ001}
+\end{figure}
+
+\begin{figure} [h] 
+  \centering
+  \includegraphics[width=15cm]{circ02.png}
+  \caption{Plot of Population Oscillations with $k=0.02$}
+  \label{fig:circ02}
+\end{figure}
 
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 \newpage
