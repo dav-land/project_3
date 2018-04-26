@@ -64,7 +64,21 @@ Understanding the growth of a population is a complex challenge as population dy
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 \setcounter{page}{3}
 \section{Background} \label{APPM2360proj01sec01}
-A simplified population growth model assumes that the growth rate of the population $\frac{dP}{dt}$ is proportional to the current size of the of population $P$. This yields the differential equation $\frac{dP}{dt}=rP$, where $r$ is the intrinsic growth rate of the population. However, the model must be adjusted when considering the dynamics of a predator species interacting with a prey species. Both the populations will still grow proportionally to their size, but now the size of the other population must also be taken into consideration. The predator species, with intrinsic growth rate $a$ and the population will be supported by interactions with the prey species. 
+A simplified population growth model assumes that the growth rate of the population $\frac{dP}{dt}$ is proportional to the current size of the of population $P$. This yields the differential equation $\frac{dP}{dt}=rP$, where $r$ is the intrinsic growth rate of the population. However, the model must be adjusted when considering the dynamics of a predator species interacting with a prey species. Both the populations will still grow proportionally to their size, but now the size of the other population must also be taken into consideration. The predator species population, with morality rate $a$, is supported by interactions with the prey species. The constant $b$ represents the reproduction rate of predator per prey. Therefore the predator population grows according to the following differential equation, 
+\begin{align*}
+%
+\frac{dx_1}{dt} & = -ax_1 + bx_1x_2 ,\ x_1(0) = x_{1,0}\\
+%
+\end{align*}
+where $x_{1,0}$ is the experimentally observed initial size of predator population. 
+
+The prey population grows according to the simplified population growth model, where the population growth rate is proportional to the population size. The constant $c$ represents the reproduction rate of the prey. Because the predator population hunts prey, population is negatively impacted by these interactions. The constant $d$ mortality rate of predator per prey. Therefore the prey population grows according to the following differential equation,
+\begin{align*}
+%
+\frac{dx_2}{dt} & = cx_1 - dx_1x_2 ,\ x_2(0) = x_{2,0}\\
+%
+\end{align*}
+where $x_{2,0}$ is the experimentally observed initial size of prey population. 
 
 
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -86,7 +100,7 @@ The Lotka-Volterra predator prey model uses the coupled system of differential e
 %
 \end{align*}
 
-where the $x_1$ is the size of the predator population and $x_2$ is the prey population. The coefficient $a$ is the mortality rate of of the population, $b$ is the reproduction rate of the predator, $c$ is the reproduction rate of the prey, and $d$ is the mortality rate of the prey. The population of the predator is supported by interactions with prey while the prey population is impacted by interactions with the prey. 
+where the $x_1$ is the size of the predator population and $x_2$ is the prey population. 
 
 From here, the horizontal and vertical nullclines are determined by setting the $\frac{dx_1}{dt}$ and $\frac{dx_2}{dt}$ equal to zero. Conceptually, when $\frac{dx_1}{dt}$ is equal to 0, there is no change along the horizontal axis and when $\frac{dx_2}{dt}$ is equal to 0, there is no change along the vertical axis. 
 \begin{align*}
