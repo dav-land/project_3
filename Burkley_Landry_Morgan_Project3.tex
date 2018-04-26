@@ -168,15 +168,18 @@ For $J$ evaluated at the equilibrium point $(\frac{c}{d},\frac{a}{b})$ the eigen
   =\lambda^2+ac
 \end{align*}
 
-\quad The physical interpretation of $(0,0)$ being unstable make sense in the context of this model because if any prey existed in this system, then the prey population would begin to grow and move away from the equilibrium point. The point $(\frac{c}{d},\frac{a}{b})$ is neutrally stable which means that once there the populations will oscillate around that point. 
-\begin{comment}
-  \begin{figure}
-    \includegraphics[width=\lindwidth]{dirfield.png}
+\quad The physical interpretation of $(0,0)$ being unstable make sense in the context of this model because if any prey existed in this system, then the prey population would begin to grow and move away from the equilibrium point. Even though if one predator existed and died out, returning the system to the equilibrium point the equilibrium, is still unstable. 
+
+\quad The point $(\frac{c}{d},\frac{a}{b})$ is neutrally stable which means that once there, the two populations will oscillate around that point. As the predator species grows, there will by more interactions with the prey species. This will have the effect of decreasing the size of the prey population as more predators hunt for food. A smaller prey population will in turn decrease the predator population by causing a food shortage. This decrease in the predator population ultimately allows the prey population to rebound and increase again. This balanced cycle repeats as time moves forward, as seen in Figure \ref{fig:dirfield}. 
+ 
+\begin{figure} [h] 
+    \centering
+    \includegraphics[width=15cm]{dirfield.png}
     \caption{Direction Field Plot}
     \label{fig:dirfield}
-  \end{figure}
-\end{comment}
+\end{figure}
 
+\quad So far, the population model has been based off the assumption that the population grows exponentially without bound. However, in reality many aspects of the environment will limit the size of the populations. These population have a carrying capacity or a number of individuals the ecosystem can feasibly support. To reflect this, model must be altered to include this parameter.    
 \begin{equation}
   \frac{dx_1}{dt} = -ax_1 + bx_1x_2
  \end{equation}
@@ -184,14 +187,14 @@ For $J$ evaluated at the equilibrium point $(\frac{c}{d},\frac{a}{b})$ the eigen
  \frac{dx_2}{dt}= cx_1(1-kx_2) - dx_1x_2 
  \label{eq:5}
 \end{equation}
-The physical meaning of parameter k in (\ref{eq:5}) is the value of carrying capacity over one, therefore the units of k are $prey^{-1}$.  The equilibrium solutions can be found
+\quad The physical meaning of parameter k in (\ref{eq:5}) is the value of carrying capacity over one, therefore the units of k are $prey^{-1}$.  The equilibrium solutions can be found
+
 
 
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+\newpage
 \setcounter{page}{4}
 \section{Conclusion} \label{APPM2360proj01sec01}
-\quad As the predator species grows, there will by more interactions with the prey species. This will have the effect of decreasing the size of the prey population as more predators hunt for food. A smaller prey population will in turn decrease the predator population by causing a food shortage. This decrease in the predator population ultimately allows the prey population to rebound and increase again.This balanced cycle repeats as time moves forward.    
-
 
 
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
