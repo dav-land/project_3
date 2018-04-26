@@ -116,12 +116,24 @@ And the horizontal nullclines are,
 x_2 &= 0, \ x_1 = \frac{c}{d} 
 \end{align*}
 
-The two-dimensional system of autonomous, first order differential equations can be written in matrix vector form where, 
+The two-dimensional system of autonomous, first order differential equations can be written in matrix vector form as a vector valued function, 
 \begin{align*} 
-\vec{x'(t)}
-%
+\textbf{x}'(t) 
+= 
+\begin{bmatrix}
+     -ax_1 + bx_1x_2\\
+     cx_2 - dx_1x_2\\
+\end{bmatrix}
 \end{align*}
 
+The Jacobian matrix for this system is give by
+\begin{align*} 
+J 
+=
+\begin{bmatrix}
+     \partial \\
+     cx_2 - dx_1x_2\\
+\end{bmatrix}
 
 
 
