@@ -59,12 +59,12 @@
 \newpage
 \setcounter{page}{2}
 \section{Introduction} \label{APPM2360proj01sec01}
-Understanding the growth of a population is a complex challenge as population dynamics depend on a large number of factors such as fertility, size, and available resources. Understanding the growth of a population becomes more complicated when observing the biological system of two interacting species.There are many ways to model the relationship between the populations of a species of predator and prey. The populations of predators and prey are interdependent, however the size of one population causes spikes or dips in the other. Beyond just the size of the species' populations, there are many external factors that can influence the growth of these species. Including these into the model results in more accurate, yet more complex, models. More intricate models take into account factors found in populations such as carrying capacity and migration in order to better predict the future growth or decline of populations. The Lotka-Volterra model incorporates observational data of a species' growth and the rate of interactions between species in order to understand the dynamics of population of predators and prey. 
+\quad Understanding the growth of a population is a complex challenge as population dynamics depend on a large number of factors such as fertility, size, and available resources. Understanding the growth of a population becomes more complicated when observing the biological system of two interacting species.There are many ways to model the relationship between the populations of a species of predator and prey. The populations of predators and prey are interdependent, however the size of one population causes spikes or dips in the other. Beyond just the size of the species' populations, there are many external factors that can influence the growth of these species. Including these into the model results in more accurate, yet more complex, models. More intricate models take into account factors found in populations such as carrying capacity and migration in order to better predict the future growth or decline of populations. The Lotka-Volterra model incorporates observational data of a species' growth and the rate of interactions between species in order to understand the dynamics of population of predators and prey. 
  
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 \setcounter{page}{3}
 \section{Background} \label{APPM2360proj01sec01}
-A simplified population growth model assumes that the growth rate of the population $\frac{dP}{dt}$ is proportional to the current size of the of population $P$. This yields the differential equation $\frac{dP}{dt}=rP$, where $r$ is the intrinsic growth rate of the population. However, the model must be adjusted when considering the dynamics of a predator species interacting with a prey species. Both the populations will still grow proportionally to their size, but now the size of the other population must also be taken into consideration. The predator species population, with morality rate $a$, is supported by interactions with the prey species. The constant $b$ represents the reproduction rate of predator per prey. Therefore the predator population grows according to the following differential equation, 
+\quad A simplified population growth model assumes that the growth rate of the population $\frac{dP}{dt}$ is proportional to the current size of the of population $P$. This yields the differential equation $\frac{dP}{dt}=rP$, where $r$ is the intrinsic growth rate of the population. However, the model must be adjusted when considering the dynamics of a predator species interacting with a prey species. Both the populations will still grow proportionally to their size, but now the size of the other population must also be taken into consideration. The predator species population, with morality rate $a$, is supported by interactions with the prey species. The constant $b$ represents the reproduction rate of predator per prey. Therefore the predator population grows according to the following differential equation, 
 \begin{align*}
 %
 \frac{dx_1}{dt} & = -ax_1 + bx_1x_2 ,\ x_1(0) = x_{1,0}\\
@@ -72,7 +72,7 @@ A simplified population growth model assumes that the growth rate of the populat
 \end{align*}
 where $x_{1,0}$ is the experimentally observed initial size of predator population. 
 
-The prey population grows according to the simplified population growth model, where the population growth rate is proportional to the population size. The constant $c$ represents the reproduction rate of the prey. Because the predator population hunts prey, population is negatively impacted by these interactions. The constant $d$ mortality rate of predator per prey. Therefore the prey population grows according to the following differential equation,
+\quad The prey population grows according to the simplified population growth model, where the population growth rate is proportional to the population size. The constant $c$ represents the reproduction rate of the prey. Because the predator population hunts prey, population is negatively impacted by these interactions. The constant $d$ mortality rate of predator per prey. Therefore the prey population grows according to the following differential equation,
 \begin{align*}
 %
 \frac{dx_2}{dt} & = cx_1 - dx_1x_2 ,\ x_2(0) = x_{2,0}\\
@@ -80,6 +80,7 @@ The prey population grows according to the simplified population growth model, w
 \end{align*}
 where $x_{2,0}$ is the experimentally observed initial size of prey population. 
 
+The Lotka-Volterra predator prey model uses the coupled system of differential equations to describe the dynamics of the two species' populations. The function $x_1(t)$ describes the size of the predator population with respect to time and the function $x_2(t)$ describes the prey population with respect to time. 
 
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 \setcounter{page}{4}
@@ -90,17 +91,7 @@ where $x_{2,0}$ is the experimentally observed initial size of prey population.
 
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 \setcounter{page}{5}
-\section{Calculations and Results} \label{APPM2360proj01sec01}
-The Lotka-Volterra predator prey model uses the coupled system of differential equations,
-\begin{align*}
-%
-\frac{dx_1}{dt} & = -ax_1 + bx_1x_2 ,\ x_1(0) = x_{1,0}\\
-%
-\frac{dx_2}{dt} & = dx_2 - dx_1x_2 ,\ x_2(0) = x_{2,0}
-%
-\end{align*}
-
-where the $x_1$ is the size of the predator population and $x_2$ is the prey population. 
+\section{Calculations and Results} \label{APPM2360proj01sec01} 
 
 From here, the horizontal and vertical nullclines are determined by setting the $\frac{dx_1}{dt}$ and $\frac{dx_2}{dt}$ equal to zero. Conceptually, when $\frac{dx_1}{dt}$ is equal to 0, there is no change along the horizontal axis and when $\frac{dx_2}{dt}$ is equal to 0, there is no change along the vertical axis. 
 \begin{align*}
