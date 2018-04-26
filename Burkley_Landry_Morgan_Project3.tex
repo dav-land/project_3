@@ -179,13 +179,25 @@ For $J$ evaluated at the equilibrium point $(\frac{c}{d},\frac{a}{b})$ the eigen
 
 \begin{equation}
   \frac{dx_1}{dt} = -ax_1 + bx_1x_2
+  \label{eq:4}
  \end{equation}
 \begin{equation}
  \frac{dx_2}{dt}= cx_1(1-kx_2) - dx_1x_2 
  \label{eq:5}
 \end{equation}
-The physical meaning of parameter k in (\ref{eq:5}) is the value of carrying capacity over one, therefore the units of k are $prey^{-1}$.  The equilibrium solutions can be found
 
+The physical meaning of parameter k in (\ref{eq:5}) is the value of carrying capacity over one, therefore the units of k are $prey^{-1}$.  The equilibrium solutions can be found when both (\ref{eq:4}) and (\ref{eq:5}) are equal to zero.  Solving for this we get,
+
+\begin{align*}
+  \frac{dx_1}{dt} =0= -ax_1 + bx_1x_2\\
+  0=x_1(-a+bx_2)\\
+  x_1=0,\ x_2=\frac{a}{b}\\
+  \frac{dx_2}{dt}=0= cx_2(1-kx_2) - dx_1x_2\\
+  0=x_2[c(1-kx_2)-dx_1]\\
+  x_2=0,\ x_2=\frac{c-dx_1}{ck}
+\end{align*}
+
+Therefore there are equilibrium points at $(0,0)$, $(0,\frac{c}{d})$, and if $k<\frac{b}{a}$ then there is also an equilibrium solution at $(\frac{a}{b},\frac{c(b-k)}{bd})$. $k$ must be less than $\frac{b}{a}$ because if it is not then that intersection of nullclines happens at a negative value of $x_1$ and is therefore unphysical in this problem.
 
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 \setcounter{page}{4}
