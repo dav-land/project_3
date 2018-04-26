@@ -74,8 +74,8 @@ legend("x1", "x2")
 hold off
 figure
 hold on
-xlabel("x1")
-ylabel("x2")
+xlabel("$x_1$","Interpreter","latex")
+ylabel("$x_2$","Interpreter","latex")
 title("Parametric curve of solutions for x1 and x2 (0, 50), k=0.02")
 plot(x(:,1),x(:,2))
 hold off
