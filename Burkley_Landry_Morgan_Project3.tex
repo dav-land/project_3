@@ -59,8 +59,8 @@
 \setcounter{page}{2}
 \section{Introduction} \label{APPM2360proj01sec01}
 
-Population dynamics depend on a large number of factors, and there are many ways to model the relationship between predator and prey. The populations of predators and prey are interdependent, with too many or too few of one causing spikes or dips in the other. Furthermore, there are external factors that can influence the populations, resulting in more complicated, and more accurate, models.
-
+Population dynamics depend on a large number of factors, and there are many ways to model the relationship between the populations of a species of predator and prey. The populations of predators and prey are interdependent, however the size of one population causes spikes or dips in the other. Beyond just the size of the species' populations, there are many external factors that can influence the growth of these species. Including these into the model results in more accurate, yet more complex, models. Simple models exist that ignore these external factors, such as the Lotka-Volterra system. Much more complicated models take into account factors found in populations such as carrying capacity and migration.
+ 
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 \newpage
 \setcounter{page}{3}
@@ -85,23 +85,35 @@ Population dynamics depend on a large number of factors, and there are many ways
 %
 \frac{dx_1}{dt} & = -ax_1 + bx_1x_2 ,\ x_1(0) = x_{1,0}\\
 %
-\frac{dx_2}{dt} & = dx_2 - dx_1x_2 ,\ x_2(0) = x_{2,0} \\
+\frac{dx_2}{dt} & = dx_2 - dx_1x_2 ,\ x_2(0) = x_{2,0}
 %
 \end{align*}
 
-
+The horizontal and vertical nullclines are determined by setting the $\frac{dx_1}{dt}$ and $\frac{dx_2}{dt}$ equal to zero. Conceptually, when $\frac{dx_1}{dt}$ is equal to 0, there is no change along the horizontal axis and when $\frac{dx_2}{dt}$ is equal to 0, there is no change along the vertical axis. 
 \begin{align*}
-%
-& \frac{dx_1}{dt} = \frac{dx_2}{dt} = 0 \\
+& \frac{dx_1}{dt} = \frac{dx_2}{dt} = 0
+\end{align*}
+
+Therefore the vertical nullclines are,
+\begin{align*}
 %
 0 & =  -ax_1 + bx_1x_2 \\
 %  
- & = x_1(-a + bx_2) \\ 
+ & = x_1(-a + bx_2) \\
 %
-0 & =  dx_2 - dx_1x_2 \\
+x_1 &= 0, \ x_2 = \frac{a}{b}  
 %
 \end{align*}
 
+And the horizontal nullclines are, 
+\begin{align*}
+%
+0 & = cx_2 - dx_1x_2 \\  
+%
+& =  x_2(c - dx_1) \\
+%
+x_2 &= 0, \ x_1 = \frac{c}{d} 
+\end{align*}
 
 
 
