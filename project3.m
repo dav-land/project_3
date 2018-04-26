@@ -3,8 +3,8 @@
 %Ethan Burkley(Section 251), Davis Landry(Section 213), Max Morgan(Section244)
 
 %% ODE eq and plotting
-[t, x] = ode45(@ODEmat, [0, 50], [10, 40]);
-
+[t, x] = ode45(@ODEmat, [0, 50], [10, 40]);%solves using ode45
+%plots the different data out
 figure 
 plot(t, x(:,1))
 hold on
