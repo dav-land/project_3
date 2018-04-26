@@ -68,19 +68,19 @@
 \quad A simplified population growth model assumes that the growth rate of the population $\frac{dP}{dt}$ is proportional to the current size of the of population $P$. This yields the differential equation $\frac{dP}{dt}=rP$, where $r$ is the intrinsic growth rate of the population. However, the model must be adjusted when considering the dynamics of a predator species interacting with a prey species. Both the populations will still grow proportionally to their size, but now the size of the other population must also be taken into consideration. The predator species population, with morality rate $a$, is supported by interactions with the prey species. The constant $b$ represents the reproduction rate of predator per prey. Therefore the predator population grows according to the following differential equation, 
 
 \begin{equation}
-%
-\frac{dx_1}{dt} = -ax_1 + bx_1x_2 ,\ x_1(0) = x_{1,0}\\
-\label{eq:1}
-%
+  %
+  \frac{dx_1}{dt} = -ax_1 + bx_1x_2 ,\ x_1(0) = x_{1,0}\\
+  \label{eq:1}
+  %
 \end{equation}
 where $x_{1,0}$ is the experimentally observed initial size of predator population. 
 
 \quad The prey population grows according to the simplified population growth model, where the population growth rate is proportional to the population size. The constant $c$ represents the reproduction rate of the prey. Because the predator population hunts prey, population is negatively impacted by these interactions. The constant $d$ mortality rate of predator per prey. Therefore the prey population grows according to the following differential equation,
 \begin{equation}
-%
-\frac{dx_2}{dt} = cx_1 - dx_1x_2 ,\ x_2(0) = x_{2,0} 
-\label{eq:2}
-%
+  %
+  \frac{dx_2}{dt} = cx_1 - dx_1x_2 ,\ x_2(0) = x_{2,0} 
+  \label{eq:2}
+  %
 \end{equation}
 
 where $x_{2,0}$ is the experimentally observed initial size of prey population. 
@@ -171,22 +171,22 @@ For $J$ evaluated at the equilibrium point $(\frac{c}{d},\frac{a}{b})$ the eigen
 \quad The physical interpretation of $(0,0)$ being unstable make sense in the context of this model because if any prey existed in this system, then the prey population would begin to grow and move away from the equilibrium point. Even though if one predator existed and died out, returning the system to the equilibrium point the equilibrium, is still unstable. 
 
 \quad The point $(\frac{c}{d},\frac{a}{b})$ is neutrally stable which means that once there, the two populations will oscillate around that point. As the predator species grows, there will by more interactions with the prey species. This will have the effect of decreasing the size of the prey population as more predators hunt for food. A smaller prey population will in turn decrease the predator population by causing a food shortage. This decrease in the predator population ultimately allows the prey population to rebound and increase again. This balanced cycle repeats as time moves forward, as seen in Figure \ref{fig:dirfield}. 
- 
+
 \begin{figure} [h] 
-    \centering
-    \includegraphics[width=15cm]{dirfield.png}
-    \caption{Direction Field Plot}
-    \label{fig:dirfield}
+  \centering
+  \includegraphics[width=15cm]{dirfield.png}
+  \caption{Direction Field Plot}
+  \label{fig:dirfield}
 \end{figure}
 
 \quad So far, the population model has been based off the assumption that the population grows exponentially without bound. However, in reality many aspects of the environment will limit the size of the populations. These population have a carrying capacity or a number of individuals the ecosystem can feasibly support. To reflect this, model must be altered to include this parameter.    
 \begin{equation}
   \frac{dx_1}{dt} = -ax_1 + bx_1x_2
   \label{eq:4}
- \end{equation}
+\end{equation}
 \begin{equation}
- \frac{dx_2}{dt}= cx_1(1-kx_2) - dx_1x_2 
- \label{eq:5}
+  \frac{dx_2}{dt}= cx_1(1-kx_2) - dx_1x_2 
+  \label{eq:5}
 \end{equation}
 
 \quad The physical meaning of parameter k in (\ref{eq:5}) is the value of carrying capacity over one, therefore the units of k are $prey^{-1}$.  The equilibrium solutions can be found when both (\ref{eq:4}) and (\ref{eq:5}) are equal to zero.  Solving for this we get,
