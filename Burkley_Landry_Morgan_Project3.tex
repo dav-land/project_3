@@ -80,7 +80,7 @@ Population dynamics depend on a large number of factors, and there are many ways
 \newpage
 \setcounter{page}{5}
 \section{Calculations and Results} \label{APPM2360proj01sec01}
-
+The Lotka-Volterra predator prey model uses the coupled system of differential equations,
 \begin{align*}
 %
 \frac{dx_1}{dt} & = -ax_1 + bx_1x_2 ,\ x_1(0) = x_{1,0}\\
@@ -89,7 +89,9 @@ Population dynamics depend on a large number of factors, and there are many ways
 %
 \end{align*}
 
-The horizontal and vertical nullclines are determined by setting the $\frac{dx_1}{dt}$ and $\frac{dx_2}{dt}$ equal to zero. Conceptually, when $\frac{dx_1}{dt}$ is equal to 0, there is no change along the horizontal axis and when $\frac{dx_2}{dt}$ is equal to 0, there is no change along the vertical axis. 
+where the $x_1$ is the size of the predator population and $x_2$ is the prey population. The coefficient $a$ is the mortality rate of of the population, $b$ is the reproduction rate of the predator, $c$ is the reproduction rate of the prey, and $d$ is the mortality rate of the prey. The population of the predator is supported by interactions with prey while the prey population is impacted by interactions with the prey. 
+
+From here, the horizontal and vertical nullclines are determined by setting the $\frac{dx_1}{dt}$ and $\frac{dx_2}{dt}$ equal to zero. Conceptually, when $\frac{dx_1}{dt}$ is equal to 0, there is no change along the horizontal axis and when $\frac{dx_2}{dt}$ is equal to 0, there is no change along the vertical axis. 
 \begin{align*}
 & \frac{dx_1}{dt} = \frac{dx_2}{dt} = 0
 \end{align*}
@@ -104,7 +106,6 @@ Therefore the vertical nullclines are,
 x_1 &= 0, \ x_2 = \frac{a}{b}  
 %
 \end{align*}
-
 And the horizontal nullclines are, 
 \begin{align*}
 %
@@ -113,6 +114,12 @@ And the horizontal nullclines are,
 & =  x_2(c - dx_1) \\
 %
 x_2 &= 0, \ x_1 = \frac{c}{d} 
+\end{align*}
+
+The two-dimensional system of autonomous, first order differential equations can be written in matrix vector form where, 
+\begin{align*} 
+\vec{x'(t)}
+%
 \end{align*}
 
 
