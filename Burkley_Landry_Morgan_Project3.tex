@@ -57,6 +57,7 @@
 
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 \newpage
+\lhead{Burkley, Landry, Morgan Project 3}
 \setcounter{page}{2}
 \section{Introduction} \label{APPM2360proj01sec01}
 \quad Understanding the growth of a population is a complex challenge as population dynamics depend on a large number of factors such as fertility, size, and available resources. Understanding the growth of a population becomes more complicated when observing the biological system of two interacting species.There are many ways to model the relationship between the populations of a species of predator and prey. The populations of predators and prey are interdependent, however the size of one population causes spikes or dips in the other. Beyond just the size of the species' populations, there are many external factors that can influence the growth of these species. Including these into the model results in more accurate, yet more complex, models. More intricate models take into account factors found in populations such as carrying capacity and migration in order to better predict the future growth or decline of populations. The Lotka-Volterra model incorporates observational data of a species' growth and the rate of interactions between species in order to understand the dynamics of population of predators and prey. 
@@ -65,19 +66,21 @@
 \setcounter{page}{3}
 \section{Background} \label{APPM2360proj01sec01}
 \quad A simplified population growth model assumes that the growth rate of the population $\frac{dP}{dt}$ is proportional to the current size of the of population $P$. This yields the differential equation $\frac{dP}{dt}=rP$, where $r$ is the intrinsic growth rate of the population. However, the model must be adjusted when considering the dynamics of a predator species interacting with a prey species. Both the populations will still grow proportionally to their size, but now the size of the other population must also be taken into consideration. The predator species population, with morality rate $a$, is supported by interactions with the prey species. The constant $b$ represents the reproduction rate of predator per prey. Therefore the predator population grows according to the following differential equation, 
-\begin{align*}
+\begin{equation}
 %
-\frac{dx_1}{dt} & = -ax_1 + bx_1x_2 ,\ x_1(0) = x_{1,0}\\
+\frac{dx_1}{dt} = -ax_1 + bx_1x_2 ,\ x_1(0) = x_{1,0}\\
+\label{eq:1}
 %
-\end{align*}
+\end{equation}
 where $x_{1,0}$ is the experimentally observed initial size of predator population. 
 
 \quad The prey population grows according to the simplified population growth model, where the population growth rate is proportional to the population size. The constant $c$ represents the reproduction rate of the prey. Because the predator population hunts prey, population is negatively impacted by these interactions. The constant $d$ mortality rate of predator per prey. Therefore the prey population grows according to the following differential equation,
-\begin{align*}
+\begin{equation}
 %
-\frac{dx_2}{dt} & = cx_1 - dx_1x_2 ,\ x_2(0) = x_{2,0}\\
+\frac{dx_2}{dt} = cx_1 - dx_1x_2 ,\ x_2(0) = x_{2,0} 
+\label{eq:2}
 %
-\end{align*}
+\end{equation}
 where $x_{2,0}$ is the experimentally observed initial size of prey population. 
 
 \quad The Lotka-Volterra predator prey model uses the coupled system of differential equations to describe the dynamics of the two species' populations. The function $x_1(t)$ describes the size of the predator population with respect to time and the function $x_2(t)$ describes the prey population with respect to time. 
@@ -98,7 +101,7 @@ From here, the horizontal and vertical nullclines are determined by setting the 
 & \frac{dx_1}{dt} = \frac{dx_2}{dt} = 0
 \end{align*}
 
-Therefore the vertical nullclines are,
+Therefore the nullclines of equation (\ref{eq:1}) are the vertical nullclines of the system. The vertical nullcines are,
 \begin{align*}
 %
 0 & =  -ax_1 + bx_1x_2 \\
@@ -108,8 +111,9 @@ Therefore the vertical nullclines are,
 x_1 &= 0, \ x_2 = \frac{a}{b}  
 %
 \end{align*}
-And the horizontal nullclines are, 
+And the nullclines of equation (\ref{eq:2}) are the horizontal nullclines of the system. The horizontal nullclines are, 
 \begin{align*}
+\tag{3}
 %
 0 & = cx_2 - dx_1x_2 \\  
 %
@@ -117,8 +121,6 @@ And the horizontal nullclines are,
 %
 x_2 &= 0, \ x_1 = \frac{c}{d} 
 \end{align*}
-
-
 
 The two-dimensional system of autonomous, first order differential equations can be written in matrix vector form as a vector valued function, 
 \begin{align*} 
@@ -130,8 +132,9 @@ The two-dimensional system of autonomous, first order differential equations can
 \end{bmatrix}
 \end{align*}
 
-The Jacobian matrix for this system is give by
+The Jacobian matrix for this system is give by the partial derivative of (3).
 \begin{align*} 
+\tag{4}
 J 
 =
 \begin{bmatrix}
@@ -145,9 +148,9 @@ J
 \end{bmatrix}
 \end{align*}
 
-\quad Now, the stability of the equilibrium solutions of the system of differential equations can be determined by using the eigenvalues of the Jacobian matrix. The Equilibrium points are at the intersections of the vertical nullcline and the horizontal nullcline, $(0,0)$ and $(\frac{c}{d},\frac{a}{b})$.  
+\quad Now, the stability of the equilibrium solutions for this system of differential equations can be determined by using the eigenvalues of the Jacobian matrix. If the Jocobian matrix's eigenvalues have a negative real part when evaluated at the equilibrium point, then the equilibrium is asymptotically stable. If the at least one of the eigenvalues has a positive real part, the equilibrium is unstable. And finally, if an eigenvalue of the Jacobian has a eigenvalue with a real part equal to zero, then the equilibrium point is neutrally stable. The Equilibrium points are at the points of intersection of a vertical nullcline and the horizontal nullcline. The vertical and horizontal nullclines intersect at $(0,0)$ and $(\frac{c}{d},\frac{a}{b})$.  
 
-For the equilibrium point $(0,0)$ we get $\lambda=-a,\ c$, which is unstable.
+For $J$ evaluated at the equilibrium point $(0,0)$ the eigenvalues are $\lambda=-a,\ c$, which is unstable.
 \begin{align*}
 \begin{vmatrix}
 	-a-\lambda &0\\
@@ -156,7 +159,7 @@ For the equilibrium point $(0,0)$ we get $\lambda=-a,\ c$, which is unstable.
 =(-a-\lambda)(c-\lambda)
 \end{align*}
 
-For the equilibrium point $(\frac{c}{d},\frac{a}{b})$ we get $\lambda=\pm\sqrt{-ac}$, which is neutrally stable.
+For $J$ evaluated at the equilibrium point $(\frac{c}{d},\frac{a}{b})$ the eigenvalues are  $\lambda=\pm i\sqrt{ac}$, which is neutrally stable.
 \begin{align*}
 \begin{vmatrix}
 	0-\lambda & \frac{bc}{d}\\
@@ -165,7 +168,7 @@ For the equilibrium point $(\frac{c}{d},\frac{a}{b})$ we get $\lambda=\pm\sqrt{-
 =\lambda^2+ac
 \end{align*}
 
-\quad The physical interpretation of $(0,0)$ being unstable is that if any prey exist in this system then they will move away from the equilibrium point. The point $(\frac{c}{d},\frac{a}{b})$ is neutrally stable which means that once there the populations will oscillate around that point. 
+\quad The physical interpretation of $(0,0)$ being unstable make sense in the context of this model because if any prey existed in this system, then the prey population would begin to grow and move away from the equilibrium point. The point $(\frac{c}{d},\frac{a}{b})$ is neutrally stable which means that once there the populations will oscillate around that point. 
 \begin{comment}
 \begin{figure}
 	\includegraphics[width=\lindwidth]{dirfield.png}
