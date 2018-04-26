@@ -135,11 +135,15 @@ The Jacobian matrix for this system is give by
 J 
 =
 \begin{bmatrix}
-     \frac{\partial{x'_1}}{\partial{x_1}} \ & \\
-     \\
+     \frac{\partial{x'_1}}{\partial{x_1}} & \frac{\partial{x'_1}}{\partial{x_2}}\\
+     \frac{\partial{x'_2}}{\partial{x_1}} &  \frac{\partial{x'_2}}{\partial{x_2}}\\
 \end{bmatrix}
-
-
+=
+\begin{bmatrix}
+     -a+bx_2 & bx_1\\
+     -dx_2 & c-dx_1\\
+\end{bmatrix}
+\end{align*}
 
 
 
