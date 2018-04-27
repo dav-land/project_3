@@ -102,12 +102,13 @@ where $x_{2,0}$ is the experimentally observed initial size of prey population.
 \setcounter{page}{2}
 \section{Calculations and Results} \label{APPM2360proj01sec01} 
 
-From here, the horizontal and vertical nullclines are determined by setting the $\frac{dx_1}{dt}$ and $\frac{dx_2}{dt}$ equal to zero. Conceptually, when $\frac{dx_1}{dt}$ is equal to 0, there is no change along the horizontal axis and when $\frac{dx_2}{dt}$ is equal to 0, there is no change along the vertical axis. 
+\quad From here, the horizontal and vertical nullclines are determined by setting the $\frac{dx_1}{dt}$ and $\frac{dx_2}{dt}$ equal to zero. Conceptually, when $\frac{dx_1}{dt}$ is equal to 0, there is no change along the horizontal axis and when $\frac{dx_2}{dt}$ is equal to 0, there is no change along the vertical axis. 
 \begin{align*}
   & \frac{dx_1}{dt} = \frac{dx_2}{dt} = 0
 \end{align*}
 
-Therefore the nullclines of equation (\ref{eq:1}) are the vertical nullclines of the system. The vertical nullcines are,
+\quad Therefore the nullclines of equation (\ref{eq:1}) are the vertical nullclines of the system. The vertical nullcines are,
+
 \begin{align*}
   %
   0 & =  -ax_1 + bx_1x_2 \\
@@ -117,7 +118,8 @@ Therefore the nullclines of equation (\ref{eq:1}) are the vertical nullclines of
   x_1 &= 0, \ x_2 = \frac{a}{b}  
   %
 \end{align*}
-And the nullclines of equation (\ref{eq:2}) are the horizontal nullclines of the system. The horizontal nullclines are, 
+
+\quad And the nullclines of equation (\ref{eq:2}) are the horizontal nullclines of the system. The horizontal nullclines are, 
 \begin{align*}
   %
   0 & = cx_2 - dx_1x_2 \\  
@@ -127,7 +129,7 @@ And the nullclines of equation (\ref{eq:2}) are the horizontal nullclines of the
   x_2 &= 0, \ x_1 = \frac{c}{d} 
 \end{align*}
 
-The two-dimensional system of autonomous, first order differential equations can be written in matrix vector form as a vector valued function, 
+\quad The two-dimensional system of autonomous, first order differential equations can be written in matrix vector form as a vector valued function, 
 \begin{align*} 
   \textbf{x}'(t) 
   = 
@@ -137,7 +139,7 @@ The two-dimensional system of autonomous, first order differential equations can
   \end{bmatrix}
 \end{align*}
 
-The Jacobian matrix for this system is given by the partial derivatives of (\ref{eq:1}) and (\ref{eq:2}).
+\quad The Jacobian matrix for this system is given by the partial derivatives of (\ref{eq:1}) and (\ref{eq:2}).
 \begin{align*} 
   J 
   =
@@ -154,7 +156,7 @@ The Jacobian matrix for this system is given by the partial derivatives of (\ref
 
 \quad Now,the stability of the equilibrium solutions for this system of differential equations can be determined by using the eigenvalues of the Jacobian matrix. If the Jocobian matrix's eigenvalues have a negative real part when evaluated at the equilibrium point, then the equilibrium is asymptotically stable. If the at least one of the eigenvalues has a positive real part, the equilibrium is unstable. And finally, if an eigenvalue of the Jacobian has a eigenvalue with a real part equal to zero, then the equilibrium point is neutrally stable. The Equilibrium points are at the points of intersection of a vertical nullcline and the horizontal nullcline. The vertical and horizontal nullclines intersect at $(0,0)$ and $(\frac{c}{d},\frac{a}{b})$.  
 
-For $J$ evaluated at the equilibrium point $(0,0)$ the eigenvalues are $\lambda=-a,\ c$, which is unstable.
+\quad For $J$ evaluated at the equilibrium point $(0,0)$ the eigenvalues are $\lambda=-a,\ c$, which is unstable.
 \begin{align*}
   \begin{vmatrix}
     -a-\lambda &0\\
@@ -163,7 +165,7 @@ For $J$ evaluated at the equilibrium point $(0,0)$ the eigenvalues are $\lambda=
   =(-a-\lambda)(c-\lambda)
 \end{align*}
 
-For $J$ evaluated at the equilibrium point $(\frac{c}{d},\frac{a}{b})$ the eigenvalues are  $\lambda=\pm i\sqrt{ac}$, which is neutrally stable.
+\quad For $J$ evaluated at the equilibrium point $(\frac{c}{d},\frac{a}{b})$ the eigenvalues are  $\lambda=\pm i\sqrt{ac}$, which is neutrally stable.
 \begin{align*}
   \begin{vmatrix}
     0-\lambda & \frac{bc}{d}\\
@@ -174,7 +176,7 @@ For $J$ evaluated at the equilibrium point $(\frac{c}{d},\frac{a}{b})$ the eigen
 
 \quad The physical interpretation of $(0,0)$ being unstable make sense in the context of this model because if any prey existed in this system, then the prey population would begin to grow and move away from the equilibrium point. Even though if one predator existed and died out, returning the system to the equilibrium point the equilibrium, is still unstable. 
 
-\quad The point $(\frac{c}{d},\frac{a}{b})$ is neutrally stable which means that once there, the two populations will oscillate around that point. As the predator species grows, there will by more interactions with the prey species. This will have the effect of decreasing the size of the prey population as more predators hunt for food. A smaller prey population will in turn decrease the predator population by causing a food shortage. This decrease in the predator population ultimately allows the prey population to rebound and increase again. This balanced cycle repeats as time moves forward, as seen in \autoref{fig:dirfield}. 
+\quad The point $(\frac{c}{d},\frac{a}{b})$ is neutrally stable which means that once there, the two populations will oscillate around that point.  
 
 \begin{figure} [h] 
   \centering
@@ -183,7 +185,27 @@ For $J$ evaluated at the equilibrium point $(\frac{c}{d},\frac{a}{b})$ the eigen
   \label{fig:dirfield}
 \end{figure}
 
+\quad As the predator species grows, there will by more interactions with the prey species. This will have the effect of decreasing the size of the prey population as more predators hunt for food. A smaller prey population will in turn decrease the predator population by causing a food shortage. This decrease in the predator population ultimately allows the prey population to rebound and increase again. This balanced cycle repeats as time moves forward, as seen in \autoref{fig:circ} and \autoref{fig:updown}. 
+
+\begin{figure} [h] 
+  \centering
+  \includegraphics[width=10cm]{images/circ.png}
+  \caption{Parametric Plot of Population Oscillations}
+  \label{fig:circ}
+\end{figure}
+
+
+\begin{figure} [h] 
+  \centering
+  \includegraphics[width=10cm]{images/updown.png}
+  \caption{Plot of Population Oscillations}
+  \label{fig:updown}
+\end{figure}
+
+\quad  \autoref{fig:circ} and \autoref{fig:updown} correlate exactly with the direction field, oscillating around the equilibrium point $(\frac{c}{d},\frac{a}{b})$. With the experimentally determined values $a=0.831$, $b=0.0162$, $c=0.2824$, and $d=0.0211$, the equilibrium point is $(13.38,51.29)$ or 13 predators and 51 prey. 
+
 \quad So far, the population model has been based off the assumption that the population grows exponentially without bound. However, in reality many aspects of the environment will limit the size of the populations. These population have a carrying capacity or a number of individuals the ecosystem can feasibly support. To reflect this, model must be altered to include this parameter.    
+
 \begin{equation}
   \frac{dx_1}{dt} = -ax_1 + bx_1x_2
   \label{eq:4}
@@ -206,6 +228,7 @@ For $J$ evaluated at the equilibrium point $(\frac{c}{d},\frac{a}{b})$ the eigen
 
 \quad Therefore there are equilibrium points at $(0,0)$, $(0,\frac{c}{d})$, and if $k<\frac{b}{a}$ then there is also an equilibrium solution at $(\frac{a}{b},\frac{c(b-k)}{bd})$. $k$ must be less than $\frac{b}{a}$ because if it is not then that intersection of nullclines happens at a negative value of $x_1$ and is therefore unphysical in this problem.
 
+
 \quad When (\ref{eq:4}) and (\ref{eq:5}) are solved numerically with ode45 where $k=0.001$ the resulting plot of $x_1 vs x_2$ is shown in \autoref{fig:circ001}.  These solutions show both periodic and asymptotic behavior. The plot cycles between periods of a low predator population with a high prey population and periods of a high predator population with a low prey population. 
 
 \quad When (\ref{eq:4}) and (\ref{eq:5}) are solved numerically with ode45 where $k=0.02$ the resulting plot of $x_1 vs x_2$ is shown in \autoref{fig:circ02}.  These solutions show periodic behavior. The plot cycles between periods of a low predator population with a high prey population and periods of a high predator population with a low prey population. 
@@ -213,16 +236,17 @@ For $J$ evaluated at the equilibrium point $(\frac{c}{d},\frac{a}{b})$ the eigen
 \begin{figure} [h] 
   \centering
   \includegraphics[width=10cm]{images/circ001.png}
-  \caption{Plot of Population Oscillations with $k=0.001$}
+  \caption{Parametric Plot of Population Oscillations with $k=0.001$}
   \label{fig:circ001}
 \end{figure}
 
 \begin{figure} [h] 
   \centering
     \includegraphics[width=10cm]{images/circ02.png}
-  \caption{Plot of Population Oscillations with $k=0.02$}
+  \caption{Parametric Plot of Population Oscillations with $k=0.02$}
   \label{fig:circ02}
 \end{figure}
+
 
 \quad The structure of these two solutions are very different, as they model different ecosystems capable of supporting different sized populations. \autoref{fig:circ001} parametrically plots a population that exceeds the carrying capacity of the ecosystem. The environment cannot support that many individuals; therefore the population asymptotically approaches the carrying capacity. This effectively decreases the predator population by creating a food shortage. Conversely, \autoref{fig:circ02} parametrically plots the a population at the carrying capacity of the surrounding ecosystem. The population is stable and cycles through periods of high and low predator and prey populations.     
 
