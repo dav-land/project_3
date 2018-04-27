@@ -61,7 +61,7 @@ title("Parametric curve of solutions for x1 and x2 (0, 50), k=0.02")
 plot(x(:,1),x(:,2))
 hold off
 %% ode for question 4.1.1
-[t, x] = ode45(@ODEmat411, [0, 200], [10, 40]);%solves using ode45
+[t, x] = ode45(@ODEmat411, [0, 300], [10, 40]);%solves using ode45
 %plots the different data out
 figure 
 plot(t, x(:,1))
