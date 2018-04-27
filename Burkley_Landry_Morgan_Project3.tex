@@ -176,7 +176,7 @@ where $x_{2,0}$ is the experimentally observed initial size of prey population.
 
 \quad The physical interpretation of $(0,0)$ being unstable make sense in the context of this model because if any prey existed in this system, then the prey population would begin to grow and move away from the equilibrium point. Even though if one predator existed and died out, returning the system to the equilibrium point the equilibrium, is still unstable. 
 
-\quad The point $(\frac{c}{d},\frac{a}{b})$ is neutrally stable which means that once there, the two populations will oscillate around that point. As the predator species grows, there will by more interactions with the prey species. This will have the effect of decreasing the size of the prey population as more predators hunt for food. A smaller prey population will in turn decrease the predator population by causing a food shortage. This decrease in the predator population ultimately allows the prey population to rebound and increase again. This balanced cycle repeats as time moves forward, as seen in \autoref{fig:dirfield}. 
+\quad The point $(\frac{c}{d},\frac{a}{b})$ is neutrally stable which means that once there, the two populations will oscillate around that point.  
 
 \begin{figure} [h] 
   \centering
@@ -185,7 +185,27 @@ where $x_{2,0}$ is the experimentally observed initial size of prey population.
   \label{fig:dirfield}
 \end{figure}
 
+\quad As the predator species grows, there will by more interactions with the prey species. This will have the effect of decreasing the size of the prey population as more predators hunt for food. A smaller prey population will in turn decrease the predator population by causing a food shortage. This decrease in the predator population ultimately allows the prey population to rebound and increase again. This balanced cycle repeats as time moves forward, as seen in \autoref{fig:circ} and \autoref{fig:updown}. 
+
+\begin{figure} [h] 
+  \centering
+  \includegraphics[width=10cm]{images/circ.png}
+  \caption{Parametric Plot of Population Oscillations}
+  \label{fig:circ}
+\end{figure}
+
+
+\begin{figure} [h] 
+  \centering
+  \includegraphics[width=10cm]{images/updown.png}
+  \caption{Plot of Population Oscillations}
+  \label{fig:updown}
+\end{figure}
+
+\quad  \autoref{fig:circ} and \autoref{fig:updown} correlate exactly with the direction field, oscillating around the equilibrium point $(\frac{c}{d},\frac{a}{b})$. With the experimentally determined values $a=0.831$, $b=0.0162$, $c=0.2824$, and $d=0.0211$, the equilibrium point is $(13.38,51.29)$ or 13 predators and 51 prey. 
+
 \quad So far, the population model has been based off the assumption that the population grows exponentially without bound. However, in reality many aspects of the environment will limit the size of the populations. These population have a carrying capacity or a number of individuals the ecosystem can feasibly support. To reflect this, model must be altered to include this parameter.    
+
 \begin{equation}
   \frac{dx_1}{dt} = -ax_1 + bx_1x_2
   \label{eq:4}
@@ -208,6 +228,7 @@ where $x_{2,0}$ is the experimentally observed initial size of prey population.
 
 \quad Therefore there are equilibrium points at $(0,0)$, $(0,\frac{c}{d})$, and if $k<\frac{b}{a}$ then there is also an equilibrium solution at $(\frac{a}{b},\frac{c(b-k)}{bd})$. $k$ must be less than $\frac{b}{a}$ because if it is not then that intersection of nullclines happens at a negative value of $x_1$ and is therefore unphysical in this problem.
 
+
 \quad When (\ref{eq:4}) and (\ref{eq:5}) are solved numerically with ode45 where $k=0.001$ the resulting plot of $x_1 vs x_2$ is shown in \autoref{fig:circ001}.  These solutions show both periodic and asymptotic behavior. The plot cycles between periods of a low predator population with a high prey population and periods of a high predator population with a low prey population. 
 
 \quad When (\ref{eq:4}) and (\ref{eq:5}) are solved numerically with ode45 where $k=0.02$ the resulting plot of $x_1 vs x_2$ is shown in \autoref{fig:circ02}.  These solutions show periodic behavior. The plot cycles between periods of a low predator population with a high prey population and periods of a high predator population with a low prey population. 
@@ -215,16 +236,17 @@ where $x_{2,0}$ is the experimentally observed initial size of prey population.
 \begin{figure} [h] 
   \centering
   \includegraphics[width=10cm]{images/circ001.png}
-  \caption{Plot of Population Oscillations with $k=0.001$}
+  \caption{Parametric Plot of Population Oscillations with $k=0.001$}
   \label{fig:circ001}
 \end{figure}
 
 \begin{figure} [h] 
   \centering
     \includegraphics[width=10cm]{images/circ02.png}
-  \caption{Plot of Population Oscillations with $k=0.02$}
+  \caption{Parametric Plot of Population Oscillations with $k=0.02$}
   \label{fig:circ02}
 \end{figure}
+
 
 \quad The structure of these two solutions are very different, as they model different ecosystems capable of supporting different sized populations. \autoref{fig:circ001} parametrically plots a population that exceeds the carrying capacity of the ecosystem. The environment cannot support that many individuals; therefore the population asymptotically approaches the carrying capacity. This effectively decreases the predator population by creating a food shortage. Conversely, \autoref{fig:circ02} parametrically plots the a population at the carrying capacity of the surrounding ecosystem. The population is stable and cycles through periods of high and low predator and prey populations.     
 
