@@ -63,7 +63,7 @@
 \quad Understanding the growth of a population is a complex challenge as population dynamics depend on a large number of factors such as fertility, size, and available resources. Understanding the growth of a population becomes more complicated when observing the biological system of two interacting species. There are many ways to model the relationship between the populations of a species of predator and prey. The populations of predators and prey are interdependent, however the size of one population causes spikes or dips in the other. Beyond just the size of the species' populations, there are many external factors that can influence the growth of these species. Including these into the model results in more accurate, yet more complex, models. More intricate models take into account factors found in populations such as carrying capacity and migration in order to better predict the future growth or decline of populations. The Lotka-Volterra model incorporates observational data of a species' growth and the rate of interactions between species in order to understand the dynamics of population of predators and prey. 
 
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-\setcounter{page}{1}
+\setcounter{page}{2}
 \section{Background} \label{APPM2360proj01sec01}
 \quad A simplified population growth model assumes that the growth rate of the population $\frac{dP}{dt}$ is proportional to the current size of the of population $P$. This yields the differential equation $\frac{dP}{dt}=rP$, where $r$ is the intrinsic growth rate of the population. However, the model must be adjusted when considering the dynamics of a predator species interacting with a prey species. Both the populations will still grow proportionally to their size, but now the size of the other population must also be taken into consideration. The predator species population, with morality rate $a$, is supported by interactions with the prey species. The constant $b$ represents the reproduction rate of predator per prey. Therefore the predator population grows according to the following differential equation, 
 
@@ -88,7 +88,7 @@ where $x_{2,0}$ is the experimentally observed initial size of prey population.
 \quad The Lotka-Volterra predator prey model uses the coupled system of differential equations to describe the dynamics of the two species' populations. The function $x_1(t)$ describes the size of the predator population with respect to time and the function $x_2(t)$ describes the prey population with respect to time. 
 
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-\setcounter{page}{2}
+\setcounter{page}{3}
 \section{Problem Statement} \label{APPM2360proj01sec01}
 \quad The animal kingdom faces an ongoing biotic crisis, with a widespread and rapid decrease in the biodiversity on Earth due to human activity. Human influence has drastically reshaped the natural landscape, altering every aspect of the environment. Everything from animal migration patterns to food sources to seasonal breeding grounds have been impacted by human activity. This biotic crisis event has been labeled as the Holocene Extinction.
 
@@ -99,7 +99,7 @@ where $x_{2,0}$ is the experimentally observed initial size of prey population.
 
 
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-\setcounter{page}{2}
+\setcounter{page}{3}
 \section{Calculations and Results} \label{APPM2360proj01sec01} 
 
 \quad From here, the horizontal and vertical nullclines are determined by setting the $\frac{dx_1}{dt}$ and $\frac{dx_2}{dt}$ equal to zero. Conceptually, when $\frac{dx_1}{dt}$ is equal to 0, there is no change along the horizontal axis and when $\frac{dx_2}{dt}$ is equal to 0, there is no change along the vertical axis. 
@@ -250,7 +250,6 @@ where $x_{2,0}$ is the experimentally observed initial size of prey population.
 
 \quad The structure of these two solutions are very different, as they model different ecosystems capable of supporting different sized populations. \autoref{fig:circ001} parametrically plots a population that exceeds the carrying capacity of the ecosystem. The environment cannot support that many individuals; therefore the population asymptotically approaches the carrying capacity. This effectively decreases the predator population by creating a food shortage. Conversely, \autoref{fig:circ02} parametrically plots the a population at the carrying capacity of the surrounding ecosystem. The population is stable and cycles through periods of high and low predator and prey populations.     
 
-\quad Beyond the physical limits of the ecosystem, prey species tend to migrate while predator species do not. This has drastic impacts on the size of the populations through different seasons. As prey species migrate during the winter season, food becomes scarce. When the prey returns, food becomes more abundant allowing the predator population to rebound. This introduces another period oscillation into the model, on top of the oscillations due to the carrying capacity.    
 \begin{figure} [h] 
   \centering
     \includegraphics[width=10cm]{images/circM.png}
@@ -265,17 +264,16 @@ where $x_{2,0}$ is the experimentally observed initial size of prey population.
   \label{fig:updownM}
 \end{figure}
 
-\quad \autoref{fig:circM} and  \autoref{fig:updownM}  show the 
+\quad Beyond the physical limits of the ecosystem, prey species tend to migrate while predator species do not. This has drastic impacts on the size of the populations through different seasons. As prey species migrate during the winter season, food becomes scarce. When the prey returns, food becomes more abundant allowing the predator population to rebound. This introduces another period oscillation into the model, on top of the oscillations due to the competition between species.  
+
+\quad \autoref{fig:circM} and  \autoref{fig:updownM} show the seasonal oscillations as well as the oscillations due to competition. This model displays a much more complete picture of the population dynamics over time. While the average populations remain the same, the populations go through periods of relative highs and lows.   
 
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 \newpage
-\setcounter{page}{4}
+\setcounter{page}{10}
 \section{Conclusion} \label{APPM2360proj01sec01}
 
 
-%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-\newpage
-\setcounter{page}{7}
-\section{Appendix} \label{APPM2360proj01sec01}
+
 
 \end{document} 
